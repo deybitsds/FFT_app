@@ -30,104 +30,621 @@
 background-color: rgb(65, 70, 167);}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>870</x>
-      <y>20</y>
-      <width>111</width>
-      <height>71</height>
-     </rect>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
     </property>
-    <property name="styleSheet">
-     <string notr="true">
-font: 75 56pt &quot;FontAwesome&quot;;
-color: rgb(246, 245, 244);</string>
+    <property name="leftMargin">
+     <number>0</number>
     </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:28pt; font-weight:600;&quot;&gt;FFT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <property name="topMargin">
+     <number>0</number>
     </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>140</y>
-      <width>371</width>
-      <height>41</height>
-     </rect>
+    <property name="rightMargin">
+     <number>0</number>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 13pt &quot;DejaVu Sans&quot;;
-color: rgb(224, 27, 36);</string>
+    <property name="bottomMargin">
+     <number>0</number>
     </property>
-    <property name="text">
-     <string>asd</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>1010</x>
-      <y>130</y>
-      <width>411</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>asd</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>430</y>
-      <width>94</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>1270</x>
-      <y>770</y>
-      <width>94</width>
-      <height>26</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
+    <item>
+     <widget class="QFrame" name="frame_izq">
+      <property name="minimumSize">
+       <size>
+        <width>960</width>
+        <height>1080</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>960</width>
+        <height>1080</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(154, 153, 150);
+background-color: rgb(192, 97, 203);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="fr_titulo">
+         <property name="minimumSize">
+          <size>
+           <width>960</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>960</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="minimumSize">
+             <size>
+              <width>960</width>
+              <height>130</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>960</width>
+              <height>130</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:48pt;&quot;&gt;FFT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="fr_algo">
+         <property name="minimumSize">
+          <size>
+           <width>960</width>
+           <height>340</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>960</width>
+           <height>340</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-color: rgb(255, 255, 255);
+gridline-color: rgb(255, 255, 255);
+selection-color: rgb(255, 255, 255);
+selection-background-color: rgb(255, 255, 255);
+border-top-color: rgb(255, 255, 255);
+border-bottom-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="fr_poli">
+         <property name="minimumSize">
+          <size>
+           <width>960</width>
+           <height>250</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>960</width>
+           <height>250</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-color: rgb(255, 255, 255);
+gridline-color: rgb(255, 255, 255);
+selection-color: rgb(255, 255, 255);
+selection-background-color: rgb(255, 255, 255);
+border-top-color: rgb(255, 255, 255);
+border-bottom-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>140</y>
+            <width>760</width>
+            <height>60</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>760</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>760</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>90</y>
+            <width>71</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="fr_agre">
+         <property name="minimumSize">
+          <size>
+           <width>960</width>
+           <height>360</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>960</width>
+           <height>360</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>30</number>
+          </property>
+          <property name="topMargin">
+           <number>15</number>
+          </property>
+          <property name="rightMargin">
+           <number>30</number>
+          </property>
+          <property name="bottomMargin">
+           <number>70</number>
+          </property>
+          <item alignment="Qt::AlignHCenter">
+           <widget class="QPushButton" name="pushButton">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius:35px;
+background-color: rgb(154, 153, 150);</string>
+            </property>
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter">
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>100</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius:35px;
+background-color: rgb(154, 153, 150);</string>
+            </property>
+            <property name="text">
+             <string>PushButton</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+      <zorder>fr_algo</zorder>
+      <zorder>fr_titulo</zorder>
+      <zorder>fr_poli</zorder>
+      <zorder>fr_agre</zorder>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_der">
+      <property name="minimumSize">
+       <size>
+        <width>960</width>
+        <height>1080</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>960</width>
+        <height>1080</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(46, 194, 126);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>75</number>
+       </property>
+       <property name="leftMargin">
+        <number>75</number>
+       </property>
+       <property name="topMargin">
+        <number>75</number>
+       </property>
+       <property name="rightMargin">
+        <number>75</number>
+       </property>
+       <property name="bottomMargin">
+        <number>75</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame_sup">
+         <property name="minimumSize">
+          <size>
+           <width>810</width>
+           <height>675</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>810</width>
+           <height>730</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">boder-radius:40px;
+border-left-color: rgb(245, 194, 17);
+background-color: rgb(245, 194, 17);
+border-color: rgb(245, 194, 17);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>60</number>
+          </property>
+          <property name="topMargin">
+           <number>30</number>
+          </property>
+          <property name="rightMargin">
+           <number>60</number>
+          </property>
+          <property name="bottomMargin">
+           <number>30</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="fr_principl">
+            <property name="minimumSize">
+             <size>
+              <width>690</width>
+              <height>615</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>690</width>
+              <height>615</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-color: rgb(245, 194, 17);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <widget class="QLabel" name="lbl_pol_8">
+               <property name="minimumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 63 28pt &quot;URW Gothic Bold&quot;;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lbl_pol_7">
+               <property name="minimumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 63 28pt &quot;URW Gothic Bold&quot;;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lbl_pol_1">
+               <property name="minimumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 63 28pt &quot;URW Gothic Bold&quot;;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lbl_pol_2">
+               <property name="minimumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 63 28pt &quot;URW Gothic Bold&quot;;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lbl_pol_3">
+               <property name="minimumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 63 28pt &quot;URW Gothic Bold&quot;;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lbl_pol_6">
+               <property name="minimumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 63 28pt &quot;URW Gothic Bold&quot;;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lbl_pol_5">
+               <property name="minimumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 63 28pt &quot;URW Gothic Bold&quot;;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lbl_pol_4">
+               <property name="minimumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>690</width>
+                 <height>76</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 63 28pt &quot;URW Gothic Bold&quot;;
+color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_inf">
+         <property name="minimumSize">
+          <size>
+           <width>810</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>810</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(248, 228, 92);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <widget class="QToolBar" name="toolBar">
-   <property name="windowTitle">
-    <string>toolBar</string>
-   </property>
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QToolBar" name="toolBar_2">
-   <property name="windowTitle">
-    <string>toolBar_2</string>
-   </property>
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
  </widget>
  <resources/>
  <connections/>
