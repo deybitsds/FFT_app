@@ -90,7 +90,7 @@ background-color: rgb(192, 97, 203);</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_5">
       <item>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="msj_titulo">
         <property name="minimumSize">
          <size>
           <width>960</width>
@@ -205,7 +205,7 @@ font: 75 28pt &quot;DejaVu Sans&quot;;
 border-radius:15px;</string>
         </property>
         <property name="text">
-         <string>2x--+3x--3+2x--2+2x--2</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -228,7 +228,7 @@ border-radius:15px;</string>
 font: 75 25pt &quot;DejaVu Sans&quot;;</string>
         </property>
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;error&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </item>
@@ -289,7 +289,7 @@ border-bottom-color: rgb(255, 255, 255);</string>
        <number>50</number>
       </property>
       <item>
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="msj_algor">
         <property name="minimumSize">
          <size>
           <width>760</width>
@@ -391,7 +391,7 @@ font: 75 32pt &quot;DejaVu Sans&quot;;</string>
        <number>60</number>
       </property>
       <item row="1" column="0">
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="bt_limpiar">
         <property name="minimumSize">
          <size>
           <width>300</width>
@@ -415,7 +415,7 @@ font: 75 25pt &quot;DejaVu Sans&quot;;</string>
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="bt_multiplicar">
         <property name="minimumSize">
          <size>
           <width>300</width>
@@ -439,7 +439,7 @@ font: 75 25pt &quot;DejaVu Sans&quot;;</string>
        </widget>
       </item>
       <item row="0" column="0">
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="bt_agregar">
         <property name="minimumSize">
          <size>
           <width>300</width>
@@ -463,7 +463,7 @@ font: 75 25pt &quot;DejaVu Sans&quot;;</string>
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="bt_estadis">
         <property name="minimumSize">
          <size>
           <width>300</width>
@@ -550,7 +550,7 @@ font: 75 25pt &quot;DejaVu Sans&quot;;</string>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">boder-radius:40px;
+        <string notr="true">border-radius:40px;
 border-left-color: rgb(245, 194, 17);
 background-color: rgb(245, 194, 17);
 border-color: rgb(245, 194, 17);
@@ -602,6 +602,31 @@ border-right-color: rgb(245, 194, 17);</string>
            <enum>QFrame::Raised</enum>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="lbl_pol_0">
+             <property name="minimumSize">
+              <size>
+               <width>670</width>
+               <height>76</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>670</width>
+               <height>76</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
+background-color: rgb(87, 227, 137);
+color: rgb(255, 255, 255);
+</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
            <item>
             <widget class="QLabel" name="lbl_pol_1">
              <property name="minimumSize">
@@ -777,31 +802,6 @@ color: rgb(255, 255, 255);
              </property>
             </widget>
            </item>
-           <item>
-            <widget class="QLabel" name="lbl_pol_8">
-             <property name="minimumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
-background-color: rgb(87, 227, 137);
-color: rgb(255, 255, 255);
-</string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
           </layout>
          </widget>
         </item>
@@ -848,7 +848,7 @@ color: rgb(255, 255, 255);
          <number>10</number>
         </property>
         <item>
-         <widget class="QLabel" name="label_2">
+         <widget class="QLabel" name="show_resul">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -871,7 +871,7 @@ font: 75 25pt &quot;DejaVu Sans&quot;;</string>
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="label_3">
+         <widget class="QLabel" name="msj_resul">
           <property name="minimumSize">
            <size>
             <width>760</width>
@@ -904,7 +904,7 @@ border-radius:20px;</string>
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="label_4">
+         <widget class="QLabel" name="msj_tiempo">
           <property name="minimumSize">
            <size>
             <width>760</width>
@@ -922,7 +922,7 @@ border-radius:20px;</string>
 font: 75 25pt &quot;DejaVu Sans&quot;;</string>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;tiempo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>

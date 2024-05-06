@@ -1,57 +1,88 @@
+# Librerias
 from PyQt5 import QtWidgets, uic
-from ventana1 import *
-from ventana2 import *
+from polinomios import *
 
 ## FUNCIONES
 
 # -- Funciones ventana 1
 
-def gui_program():
-    pol_1 = program.input_pol_1.text()
-    pol_2 = program.input_pol_2.text()
-    if pol_1 == "no sé":
-        program.msj_error.setText("Guasa")
-    elif pol_1 == "si sé":
-        gui_resultado()
+# ---------- Agregar
+def gui_agregar():
+    polinomio = mul_window.input_user.text()
+
+    # verificar polinomio correcto
+    if not polinomio_es_valido(polinomio):
+        mul_window.msj_error.setText("Polinomio ingresado no es válido")
+    
+    elif len(pila_coeficientes) == 8:
+        mul_window.msj_error.setText("Se llenó la memoria :v")
+
     else:
-        program.msj_error.hide()
+        # limpiar el mensaje de error
+        mul_window.msj_error.setText("")
 
-def gui_resultado():
-    program.hide()
-    resultado.show()
+        # recuperar los coeficientes del polinomio
+        lista_coeficientes = recuperar_coeficientes_polinomio_mal_escrito(polinomio)
+        
+        # corregir la escritura del polinomio
+        mensaje = imprimir_polinomio_bien_escrito(lista_coeficientes)
+        
+        # imprimir la nueva escritura del polinomio en la pila
+        pila_polinomios[len(pila_coeficientes)].setText(mensaje)
+        
+        # agregar la lista de coeficientes a la lista principal        
+        pila_coeficientes.append(lista_coeficientes)
 
-# -- Funciones ventana 2
+# ---------- Multiplicar
+def gui_multiplicar():
+    pass
+    
+
+
+# ---------- Limpiar
+def gui_limpiar():
+    global pila_coeficientes
+    for t in pila_polinomios:
+        t.setText("")
+    pila_coeficientes = []
+
+# ---------- Estadisticas
+def gui_estadisticas():
+    pass
+
+pila_polinomios = []
+
+pila_coeficientes = []
 
 ## PROGRAMA PRINCIPAL
-app = QtWidgets.QApplication([])
+if __name__ == "__main__":
 
-# cargar archivos .ui
-program = uic.loadUi("ventana1.ui")
-resultado = uic.loadUi("ventana2.ui")
+    app = QtWidgets.QApplication([])
 
-# Botones
-# program.boton_calcular.clicked.connect(gui_program)
+    # ---------- Archivos UI
+    mul_window = uic.loadUi("ventana1.ui")
 
-# Ejecutar
-program.show()
-app.exec()
+    pila_polinomios = [mul_window.lbl_pol_0, mul_window.lbl_pol_1,
+                        mul_window.lbl_pol_2,mul_window.lbl_pol_3, 
+                        mul_window.lbl_pol_4, mul_window.lbl_pol_5, 
+                        mul_window.lbl_pol_6, mul_window.lbl_pol_7] 
+    
+    pila_coeficientes = []
 
-def algoritmo(lista_valores):
-    # El algoritmo
+    # ---------- Botones
+    
+    # Agregar
+    mul_window.bt_agregar.clicked.connect(gui_agregar)
+    
+    # Multiplicar
+    mul_window.bt_multiplicar.clicked.connect(gui_multiplicar)
 
-    return lista_coeficientes
+    # Limpiar
+    mul_window.bt_limpiar.clicked.connect(gui_limpiar)
 
+    # Estadisticas
+    mul_window.bt_estadis.clicked.connect(gui_estadisticas)
 
-def main():
-    # leer coeficientes usuario
-    lista_coeficientes = [1,2,0,4] # 1 + 2x + 0x² + 4x³
-    # siempre len(lista_coef) será multiplo de 2
-
-    lista_puntos1 = funcion_de_evaluar(lista_coeficientes)
-    lista_puntos2 = funcion_de_evaluar(lista_coeficientes)
-
-    # multiplicamos los puntos
-    lista_puntos_multiplicacion = multiplicar(lista_puntos1, lista_puntos2)
-
-    lista_coeficientes_resultado = funcion_interpolar(lista_puntos_multiplicacion)
-
+    # ---------- Ejecutar
+    mul_window.show()
+    app.exec()
