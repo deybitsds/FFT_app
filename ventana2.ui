@@ -33,8 +33,8 @@ background-color: rgb(65, 70, 167);}</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>870</x>
-      <y>20</y>
+      <x>920</x>
+      <y>140</y>
       <width>111</width>
       <height>71</height>
      </rect>
@@ -304,7 +304,7 @@ color: rgb(246, 245, 244);</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:28pt; font-weight:600;&quot;&gt;FFT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>270</x>

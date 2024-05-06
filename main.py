@@ -6,6 +6,20 @@ from ventana2 import *
 
 # -- Funciones ventana 1
 
+def gui_program():
+    pol_1 = program.input_pol_1.text()
+    pol_2 = program.input_pol_2.text()
+    if pol_1 == "no sé":
+        program.msj_error.setText("Guasa")
+    elif pol_1 == "si sé":
+        gui_resultado()
+    else:
+        program.msj_error.hide()
+
+def gui_resultado():
+    program.hide()
+    resultado.show()
+
 # -- Funciones ventana 2
 
 ## PROGRAMA PRINCIPAL
@@ -16,7 +30,7 @@ program = uic.loadUi("ventana1.ui")
 resultado = uic.loadUi("ventana2.ui")
 
 # Botones
-program.boton_calcular.clicked.connect(gui_program)
+# program.boton_calcular.clicked.connect(gui_program)
 
 # Ejecutar
 program.show()
@@ -26,7 +40,7 @@ def algoritmo(lista_valores):
     # El algoritmo
 
     return lista_coeficientes
-S
+
 
 def main():
     # leer coeficientes usuario
