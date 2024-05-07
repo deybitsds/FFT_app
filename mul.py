@@ -24,8 +24,8 @@ def operar_dos_en_dos(funcion, lista_coef_1, lista_coef_2):
     return funcion(lista_coef_1, lista_coef_2)
 
 # ---------- Lagrange
-def mul_con_lagrange():
-    pass
+def mul_con_lagrange(lista_1, lista_2):
+    return mul_con_vandermonde_r(lista_1, lista_2)
 
 # ---------- Vandermonde en R
 def mul_con_vandermonde_r(coef_poli1, coef_poli2):
