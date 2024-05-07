@@ -52,8 +52,7 @@ background-color: rgb(65, 70, 167);}</string>
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(154, 153, 150);
-background-color: rgb(192, 97, 203);</string>
+     <string notr="true">background-color: rgb(65, 70, 167);</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -102,6 +101,9 @@ background-color: rgb(192, 97, 203);</string>
           <width>960</width>
           <height>130</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:600;&quot;&gt;Multiplicación de polinomios&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -176,9 +178,9 @@ border-bottom-color: rgb(255, 255, 255);</string>
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
-background-color: rgb(192, 97, 203);
-font: 75 30pt &quot;DejaVu Sans&quot;;</string>
+         <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
+color: rgb(255, 255, 255);
+</string>
         </property>
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ingrese un polinomio:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -224,8 +226,7 @@ border-radius:15px;</string>
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 163, 72);
-font: 75 25pt &quot;DejaVu Sans&quot;;</string>
+         <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;</string>
         </property>
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -234,8 +235,8 @@ font: 75 25pt &quot;DejaVu Sans&quot;;</string>
       </item>
      </layout>
      <zorder>msj_error</zorder>
-     <zorder>msj_pol</zorder>
      <zorder>input_user</zorder>
+     <zorder>msj_pol</zorder>
     </widget>
     <widget class="QFrame" name="fr_algo">
      <property name="geometry">
@@ -303,8 +304,9 @@ border-bottom-color: rgb(255, 255, 255);</string>
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(248, 228, 92);
-font: 75 30pt &quot;DejaVu Sans&quot;;</string>
+         <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
+color: rgb(255, 255, 255);
+</string>
         </property>
         <property name="text">
          <string>Elija un algoritmo</string>
@@ -406,8 +408,9 @@ font: 75 32pt &quot;DejaVu Sans&quot;;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">border-radius:35px;
-background-color: rgb(154, 153, 150);
-font: 75 25pt &quot;DejaVu Sans&quot;;</string>
+background-color: rgb(218, 174, 58);
+font: 75 25pt &quot;DejaVu Sans&quot;;
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Limpiar</string>
@@ -430,8 +433,9 @@ font: 75 25pt &quot;DejaVu Sans&quot;;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">border-radius:35px;
-background-color: rgb(154, 153, 150);
-font: 75 25pt &quot;DejaVu Sans&quot;;</string>
+background-color: rgb(218, 174, 58);
+font: 75 25pt &quot;DejaVu Sans&quot;;
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Multiplicar</string>
@@ -454,8 +458,9 @@ font: 75 25pt &quot;DejaVu Sans&quot;;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">border-radius:35px;
-background-color: rgb(154, 153, 150);
-font: 75 25pt &quot;DejaVu Sans&quot;;</string>
+background-color: rgb(218, 174, 58);
+font: 75 25pt &quot;DejaVu Sans&quot;;
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Agregar</string>
@@ -478,8 +483,9 @@ font: 75 25pt &quot;DejaVu Sans&quot;;</string>
         </property>
         <property name="styleSheet">
          <string notr="true">border-radius:35px;
-background-color: rgb(154, 153, 150);
-font: 75 25pt &quot;DejaVu Sans&quot;;</string>
+background-color: rgb(218, 174, 58);
+font: 75 25pt &quot;DejaVu Sans&quot;;
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Estadísticas</string>
@@ -511,7 +517,7 @@ font: 75 25pt &quot;DejaVu Sans&quot;;</string>
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(46, 194, 126);</string>
+     <string notr="true">background-color: rgb(98, 160, 234);</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -552,9 +558,9 @@ font: 75 25pt &quot;DejaVu Sans&quot;;</string>
        <property name="styleSheet">
         <string notr="true">border-radius:40px;
 border-left-color: rgb(245, 194, 17);
-background-color: rgb(245, 194, 17);
 border-color: rgb(245, 194, 17);
-border-right-color: rgb(245, 194, 17);</string>
+border-right-color: rgb(245, 194, 17);
+background-color: rgb(65, 70, 167);</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -618,7 +624,6 @@ border-right-color: rgb(245, 194, 17);</string>
              </property>
              <property name="styleSheet">
               <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
-background-color: rgb(87, 227, 137);
 color: rgb(255, 255, 255);
 </string>
              </property>
@@ -643,7 +648,6 @@ color: rgb(255, 255, 255);
              </property>
              <property name="styleSheet">
               <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
-background-color: rgb(87, 227, 137);
 color: rgb(255, 255, 255);
 </string>
              </property>
@@ -668,7 +672,6 @@ color: rgb(255, 255, 255);
              </property>
              <property name="styleSheet">
               <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
-background-color: rgb(87, 227, 137);
 color: rgb(255, 255, 255);
 </string>
              </property>
@@ -693,7 +696,6 @@ color: rgb(255, 255, 255);
              </property>
              <property name="styleSheet">
               <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
-background-color: rgb(87, 227, 137);
 color: rgb(255, 255, 255);
 </string>
              </property>
@@ -718,7 +720,6 @@ color: rgb(255, 255, 255);
              </property>
              <property name="styleSheet">
               <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
-background-color: rgb(87, 227, 137);
 color: rgb(255, 255, 255);
 </string>
              </property>
@@ -743,7 +744,6 @@ color: rgb(255, 255, 255);
              </property>
              <property name="styleSheet">
               <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
-background-color: rgb(87, 227, 137);
 color: rgb(255, 255, 255);
 </string>
              </property>
@@ -768,7 +768,6 @@ color: rgb(255, 255, 255);
              </property>
              <property name="styleSheet">
               <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
-background-color: rgb(87, 227, 137);
 color: rgb(255, 255, 255);
 </string>
              </property>
@@ -793,7 +792,6 @@ color: rgb(255, 255, 255);
              </property>
              <property name="styleSheet">
               <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
-background-color: rgb(87, 227, 137);
 color: rgb(255, 255, 255);
 </string>
              </property>
@@ -823,7 +821,8 @@ color: rgb(255, 255, 255);
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(248, 228, 92);</string>
+        <string notr="true">border-radius:40px;
+background-color: rgb(65, 70, 167);</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::StyledPanel</enum>
@@ -862,8 +861,8 @@ color: rgb(255, 255, 255);
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 163, 72);
-font: 75 25pt &quot;DejaVu Sans&quot;;</string>
+           <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
+color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;RESULTADO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -894,12 +893,12 @@ font: 75 25pt &quot;DejaVu Sans&quot;;</string>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(237, 51, 59);
+           <string notr="true">background-color: rgb(255, 255, 255);
 font: 75 30pt &quot;DejaVu Sans&quot;;
 border-radius:20px;</string>
           </property>
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;2x**2+8x-2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -918,8 +917,7 @@ border-radius:20px;</string>
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 163, 72);
-font: 75 25pt &quot;DejaVu Sans&quot;;</string>
+           <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;</string>
           </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
