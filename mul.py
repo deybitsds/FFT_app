@@ -7,6 +7,8 @@ def operar(funcion, pila_coeficientes):
 
     resultado = pila_coeficientes[0]
 
+    inicio = 0
+    fin = 0
     # MEDIR TIEMPO
     inicio = time.time()
 

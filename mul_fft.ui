@@ -83,7 +83,7 @@ background-color: rgb(65, 70, 167);</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">boder:none;</string>
+      <string notr="true">border:none;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -107,7 +107,7 @@ background-color: rgb(65, 70, 167);</string>
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">boder:none;
+         <string notr="true">border:none;
 color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
@@ -139,7 +139,7 @@ color: rgb(255, 255, 255);</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">boder:none;
+      <string notr="true">border:none;
 gridline-color: rgb(255, 255, 255);
 selection-color: rgb(255, 255, 255);
 selection-background-color: rgb(255, 255, 255);
@@ -265,7 +265,7 @@ border-radius:15px;</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">boder:none;
+      <string notr="true">border:none;
 gridline-color: rgb(255, 255, 255);
 selection-color: rgb(255, 255, 255);
 selection-background-color: rgb(255, 255, 255);
@@ -382,7 +382,7 @@ font: 75 32pt &quot;DejaVu Sans&quot;;</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">boder:none;</string>
+      <string notr="true">border:none;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>

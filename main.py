@@ -39,11 +39,10 @@ def gui_agregar():
 def gui_multiplicar():
     
     opcion_actual = mul_window.comboBox.currentText()
-    
-    resultado, tiempo_trancurrido = operar(diccionario_funciones[opcion_actual], pila_coeficientes)
+    resultado, tiempo_transcurrido = operar(diccionario_funciones[opcion_actual], pila_coeficientes)
     
     salida_resultado = imprimir_polinomio_bien_escrito(resultado)
-    mul_window.msj_resul.setText(resultado)
+    mul_window.msj_resul.setText(salida_resultado)
 
     salida_tiempo = f"Tiempo de ejecución: {tiempo_transcurrido * 1e+6:.5f} µs"
     mul_window.msj_tiempo.setText(salida_tiempo)
