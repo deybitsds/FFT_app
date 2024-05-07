@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>AppMulPolinomios</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget#centralwidget{
@@ -52,7 +52,8 @@ background-color: rgb(65, 70, 167);}</string>
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(65, 70, 167);</string>
+     <string notr="true">boder:none;
+background-color: rgb(65, 70, 167);</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -81,6 +82,9 @@ background-color: rgb(65, 70, 167);}</string>
        <height>150</height>
       </size>
      </property>
+     <property name="styleSheet">
+      <string notr="true">boder:none;</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -103,7 +107,8 @@ background-color: rgb(65, 70, 167);}</string>
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">color: rgb(255, 255, 255);</string>
+         <string notr="true">boder:none;
+color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:600;&quot;&gt;Multiplicación de polinomios&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -134,7 +139,7 @@ background-color: rgb(65, 70, 167);}</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-color: rgb(255, 255, 255);
+      <string notr="true">boder:none;
 gridline-color: rgb(255, 255, 255);
 selection-color: rgb(255, 255, 255);
 selection-background-color: rgb(255, 255, 255);
@@ -260,7 +265,7 @@ border-radius:15px;</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-color: rgb(255, 255, 255);
+      <string notr="true">boder:none;
 gridline-color: rgb(255, 255, 255);
 selection-color: rgb(255, 255, 255);
 selection-background-color: rgb(255, 255, 255);
@@ -375,6 +380,9 @@ font: 75 32pt &quot;DejaVu Sans&quot;;</string>
        <width>960</width>
        <height>360</height>
       </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">boder:none;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
