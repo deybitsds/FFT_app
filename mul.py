@@ -114,79 +114,82 @@ def IgualarPolinomios(a, b):
     return a, b
 
 # ---------- Bit reverso
-def mul_con_bit_reverso():
-    pass
+def mul_con_bit_reverso(A, B):
+    m = len(A)
+    n = len(B)
+    k = m + n - 1
 
+    # Asegúrate de que k sea una potencia de 2
+    k = 2 ** (int(np.log2(k)) + 1)
+
+    A.extend([0] * (k - m))
+    B.extend([0] * (k - n))
+
+    ya = FFT(A)
+    yb = FFT(B)
+
+    yc = [ya[i] * yb[i] for i in range(k)]
+
+    C = [round(val.real) for val in IFFT(yc)]
+
+    return C[:m+n-1]
+
+
+def bit_reverso(n):
+    num_bits = int(np.log2(n))
+    indices_reversos = [0] * n
+    for i in range(n):
+        indices_reversos[i] = int(
+            format(i, '0' + str(num_bits) + 'b')[::-1], 2)
+    return indices_reversos
+
+
+def FFT(P):
+    n = len(P)
+    indices = bit_reverso(n)
+    P = [P[i] for i in indices]
+
+    for s in range(1, int(np.log2(n)) + 1):
+        m = 2 ** s
+        w_m = np.exp(-2 * np.pi * 1j / m)
+        for k in range(0, n, m):
+            w = 1
+            for j in range(m // 2):
+                t = w * P[k + j + m // 2]
+                u = P[k + j]
+                P[k + j] = u + t
+                P[k + j + m // 2] = u - t
+                w = w * w_m
+
+    return P
+
+
+def IFFT(P):
+    n = len(P)
+    indices = bit_reverso(n)
+    P = [P[i] for i in indices]
+
+    for s in range(1, int(np.log2(n)) + 1):
+        m = 2 ** s
+        w_m = np.exp(2 * np.pi * 1j / m)
+        for k in range(0, n, m):
+            w = 1
+            for j in range(m // 2):
+                t = w * P[k + j + m // 2]
+                u = P[k + j]
+                P[k + j] = u + t
+                P[k + j + m // 2] = u - t
+                w = w * w_m
+
+    P = [val / n for val in P]
+
+    return P
+
+# ---------- Principal
 if __name__ == "__main__":
     # pila_coeficientes = 
     
-    inicio = time.time()
-    for k in range(100):
-        a = 100 * 3
-    
-    fin = time.time()
-    xd = fft([1,2,3,4,5,6,7])
-    tiempo_transcurrido = (fin-inicio) 
-    
-    salida_tiempo = f"Tiempo de ejecución: {tiempo_transcurrido * 1e+6:.5f} µs"
-    print(salida_tiempo)
+    A = [-1,2,0,0,3]
+    B = [-6,5,0,4]
 
-
-
-
-
-
-
-
-
-
-
-def IgualarPolinomios(a, b):
-    GradoResultante = len(a) + len(b)  # Grado del polinomio resultante
-    TamanoFinal = GradoResultante - 1  # Tamaño deseado de las listas
-
-    # Añadir ceros al final de cada lista para igualar su tamaño al tamaño deseado
-    a += [0] * (TamanoFinal - len(a))
-    b += [0] * (TamanoFinal - len(b))
-
-    return a, b
-
-def VandermondeI(a,b):
-    # Obtener el tamaño de la entrada
-    a,b = IgualarPolinomios(a, b)
-    N = len(a)
-
-    # Calcular la matriz Vandermonde
-    w_n = np.exp(2j * np.pi / N)
-    V_n = np.vander(np.array([w_n ** i for i in range(N)]), increasing=True)
-    # Evaluacion de coeficientes
-    y1 = np.dot(V_n, a)
-    y1_redondeado = [round(x.real, 10) + round(x.imag, 10) * 1j for x in y1]
-    y2 = np.dot(V_n, b)
-    y2_redondeado = [round(x.real, 10) + round(x.imag, 10) * 1j for x in y2]
-    # Multiplicación punto (Yk)
-    ProductoPunto = [x * y for x, y in zip(y1_redondeado, y2_redondeado)]
-    np.set_printoptions(precision=3, suppress=True)
-
-    # Interpolación
-    # Inversa de la matriz de vandermonde 
-    V_n_inv = np.array([[1/x for x in row] for row in V_n])
-    # Vn^-1 . Yk / N
-    ResultadoFinal = np.dot(V_n_inv, ProductoPunto)
-    ResultadoFinal = ResultadoFinal / len(a)
-    ResultadoFinal = np.round(ResultadoFinal).astype(int)
-    return ResultadoFinal.tolist()
-
-def completar_con_ceros(lista):
-    longitud_actual = len(lista)
-    siguiente_potencia_dos = 1
-    while siguiente_potencia_dos < longitud_actual:
-        siguiente_potencia_dos *= 2
-    
-    # Si la longitud actual ya es una potencia de 2, no hay necesidad de completar con ceros
-    if longitud_actual == siguiente_potencia_dos:
-        return lista  
-    # Calcular cuántos ceros se deben agregar
-    ceros_a_agregar = siguiente_potencia_dos - longitud_actual
-    lista_completa = lista + [0] * ceros_a_agregar
-    return lista_completa
+    print(mul_con_bit_reverso(A,B))
