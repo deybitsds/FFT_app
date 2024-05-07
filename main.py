@@ -32,6 +32,9 @@ def gui_agregar():
         # agregar la lista de coeficientes a la lista principal        
         pila_coeficientes.append(lista_coeficientes)
 
+        # limpiar la caja de input
+        mul_window.input_user.setText("")
+
 # ---------- Multiplicar
 def gui_multiplicar():
     

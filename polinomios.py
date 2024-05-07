@@ -1,6 +1,44 @@
-def recuperar_coeficientes_polinomio_mal_escrito(string):
-    pass
+import re
 
+# ---------- Coeficientes
+def recuperar_coeficientes_polinomio_mal_escrito(string):
+    cadena = borrar_espacios(string)
+    if "^-" in cadena or re.search(r'[^0-9+\-*x^ ]', cadena):
+        return None
+    else:
+        return coefs(cadena)
+
+def coefs(entrada):
+  regexp = r"(-?\d*)(x?)(?:(?:\^|\\)(\d))?"
+  c = {}
+  for coef, x, exp in re.findall(regexp, entrada):
+    # print(coef, x, exp)
+    if not coef and not x:
+      continue
+    if x and not coef:
+      coef = '1'
+    if x and coef == "-":
+      coef = "-1"
+    if x and not exp:
+      exp = '1'
+    if coef and not x:
+      exp = '0'
+    exp = ord(exp) & 0x000F
+    if exp in c:
+        c[exp] += float(coef)
+    else:
+        c[exp] = float(coef)
+  grado = max(c)
+  coeficientes = [0.0] * (grado+1)
+  for g, v in c.items():
+    coeficientes[g] = v
+  return [int(numero) for numero in coeficientes]
+  
+def borrar_espacios(a):
+    a = a.replace(" ", "")
+    return a
+
+# ---------- Imprimir nuevo polinomio
 def imprimir_polinomio_bien_escrito(lista_coeficientes):
     grado = len(lista_coeficientes) - 1
     polinomio = ""
@@ -19,7 +57,7 @@ def imprimir_polinomio_bien_escrito(lista_coeficientes):
     return polinomio
 
 def polinomio_es_valido(string):
-    return #True
+    return recuperar_coeficientes_polinomio_mal_escrito(string)
 
 if __name__ == "__main__":
-    print("xd")
+    print(recuperar_coeficientes_polinomio_mal_escrito("1 + 2x"))
