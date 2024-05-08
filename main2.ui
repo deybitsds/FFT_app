@@ -957,7 +957,7 @@ border-radius:20px;</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-radius:35px;
+      <string notr="true">border-radius:20px;
 background-color: rgb(218, 174, 58);
 font: 75 25pt &quot;DejaVu Sans&quot;;
 color: rgb(255, 255, 255);</string>

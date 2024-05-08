@@ -53,9 +53,9 @@ def gui_multiplicar():
     if not pila_coeficientes:
         mul_window.msj_error.setText("No hay polinomios ingresados")
         return 
-        
+
     opcion_actual = mul_window.comboBox.currentText()
-    resultado, tiempo_transcurrido = operar(diccionario_funciones[opcion_actual], pila_coeficientes)
+    resultado, tiempo_transcurrido = operar(funcion = diccionario_funciones[opcion_actual], lista_coeficientes = pila_coeficientes)
     
     salida_resultado = imprimir_polinomio_bien_escrito(resultado)
     mul_window.msj_resul.setText(salida_resultado)

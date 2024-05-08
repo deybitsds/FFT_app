@@ -1,19 +1,16 @@
 import time
-from numpy.fft import fft, ifft
 import numpy as np
 
 # ---------- Operar
-def operar(funcion, pila_coeficientes):
+def operar(funcion, lista_coeficientes):
 
-    resultado = pila_coeficientes[0]
+    resultado = lista_coeficientes[0]
 
-    inicio = 0
-    fin = 0
     # MEDIR TIEMPO
     inicio = time.time()
 
-    for k in range(1,len(pila_coeficientes)):
-        resultado = operar_dos_en_dos(funcion, resultado, pila_coeficientes[k])
+    for k in range(1,len(lista_coeficientes)):
+        resultado = operar_dos_en_dos(funcion, resultado, lista_coeficientes[k])
     
     # MEDIR TIEMPO
     fin = time.time()
@@ -24,10 +21,6 @@ def operar(funcion, pila_coeficientes):
 
 def operar_dos_en_dos(funcion, lista_coef_1, lista_coef_2):
     return funcion(lista_coef_1, lista_coef_2)
-
-# ---------- Lagrange
-def mul_con_lagrange(lista_1, lista_2):
-    return mul_con_vandermonde_r(lista_1, lista_2)
 
 # ---------- Vandermonde en R
 def mul_con_vandermonde_r(coef_poli1, coef_poli2):
@@ -78,6 +71,78 @@ def generar_valores(n):
         l.append(k)
     return l
 
+# ---------- Lagrange
+def mul_con_lagrange(A, B):
+    # Igualar longitudes de los polinomios
+    if len(A) < len(B):
+        A += [0] * (len(B) - len(A)) 
+    if len(A) > len(B):
+        B += [0] * (len(A) - len(B)) 
+    # Evaluación usando Horner
+    evaluacion_A = evaluacion_horner(A)  # Evaluar el polinomio A
+    evaluacion_B = evaluacion_horner(B)  # Evaluar el polinomio B
+    return operar_lagrange(A, B)
+    # Multiplicación punto a punto de las evaluaciones
+    multiplicacion_punto_a_punto = [evaluacion_A[x] * evaluacion_B[x] for x in range(len(A) + 1)]
+    
+    # Interpolación para obtener los coeficientes del polinomio resultante
+    coeficientes = interpolacion_lagrange([i for i in range(len(A) + 1)], multiplicacion_punto_a_punto)
+    # Retornar coeficientes
+    return coeficientes
+
+# Módulo Evaluación con horner
+def evaluacion_horner(A):
+    n = len(A) + 1  # Tamaño del polinomio evaluado
+    x = [i for i in range(n)]  # Lista de puntos de evaluación
+    resultado = [A[-1] for _ in range(n)]  # Resultado inicial basado en el último coeficiente
+
+    # Evaluación usando el método de Horner
+    for k in range(n):
+        for i in reversed(range(1, len(A))):  # Recorre los coeficientes de derecha a izquierda
+            resultado[k] = x[k] * resultado[k] + A[i-1]  # Aplicación del método de Horner
+    # Retornar resultado
+    return resultado
+
+def operar_lagrange(A, B):
+    return mul_con_vandermonde_i(A,B)
+
+# Módulo Convolución
+def convolucion(A, B):
+    # Inicializar una lista para almacenar los coeficientes del resultado de la convolución
+    coeficientes = [0 for _ in range(len(A) + len(B) - 1)]
+
+    # Realizar la convolución (multiplicación de polinomios)
+    for i in range(len(A)):
+        for j in range(len(B)):
+            coeficientes[i + j] += A[i] * B[j]  # Actualiza el coeficiente correspondiente
+    # Retornar coeficientes
+    return coeficientes
+
+# Módulo de Interpolación de Lagrange
+def interpolacion_lagrange(x, y):
+    coeficientes = []
+    polinomios_parciales = []
+    n = len(x)  # Número de puntos
+    
+    # Construir polinomios parciales para la interpolación
+    for i in range(n):
+        denominador, numerador = 1, [1, 0]  # Inicializar el numerador y el denominador
+        for j in range(n):
+            if i != j:
+                denominador *= x[i] - x[j]  # Calcular el denominador
+                numerador = convolucion(numerador, [-x[j], 1])  # Calcular el numerador parcial
+        
+        # Ajustar el numerador por el valor correspondiente de y y el denominador
+        numerador = [k / denominador * y[i] for k in numerador]
+        polinomios_parciales.append(numerador)
+    
+    # Sumar los polinomios parciales para obtener el polinomio interpolado
+    for i in range(n):
+        coeficientes.append(sum([polinomios_parciales[j][i] for j in range(n)]))
+    #Retornar coeficientes
+    return coeficientes
+
+    
 # ---------- Vandermonde en I
 def mul_con_vandermonde_i(a,b):
     # Obtener el tamaño de la entrada
