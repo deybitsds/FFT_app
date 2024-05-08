@@ -2,6 +2,8 @@
 from PyQt5 import QtWidgets, uic
 from polinomios import *
 from mul import *
+from est import *
+
 
 ## FUNCIONES
 
@@ -10,7 +12,7 @@ def gui_agregar():
     polinomio = mul_window.input_user.text()
 
     # verificar polinomio correcto
-    if not polinomio_es_valido(polinomio):
+    if polinomio.replace(" ", "") == "" or not polinomio_es_valido(polinomio):
         mul_window.msj_error.setText("Polinomio ingresado no es válido")
     
     elif len(pila_coeficientes) == 8:
@@ -35,9 +37,23 @@ def gui_agregar():
         # limpiar la caja de input
         mul_window.input_user.setText("")
 
+# ---------- Eliminar
+def gui_eliminar():
+    global pila_coeficientes
+
+    mul_window.input_user.setText("")
+    
+    pila_polinomios[len(pila_coeficientes) - 1].setText("")
+
+    pila_coeficientes.pop()
+
 # ---------- Multiplicar
 def gui_multiplicar():
     
+    if not pila_coeficientes:
+        mul_window.msj_error.setText("No hay polinomios ingresados")
+        return 
+        
     opcion_actual = mul_window.comboBox.currentText()
     resultado, tiempo_transcurrido = operar(diccionario_funciones[opcion_actual], pila_coeficientes)
     
@@ -60,12 +76,14 @@ def gui_limpiar():
     mul_window.msj_error.setText("")
 
     pila_coeficientes = []
-    
 
 # ---------- Estadisticas
 def gui_estadisticas():
+    # mostrar_grafico()
+    # ventana.show()
     est_window.show()
-
+    est_window.bt_volver.clicked.connect(gui_volver)
+    
 def gui_volver():
     est_window.hide()
 
@@ -84,7 +102,9 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication([])
 
     # ---------- Archivos UI
-    mul_window = uic.loadUi("mul_fft.ui")
+    # mul_window = uic.loadUi("mul_fft.ui")
+
+    mul_window = uic.loadUi("main2.ui")
     est_window = uic.loadUi("estadisticas.ui")
 
     pila_polinomios = [mul_window.lbl_pol_0, mul_window.lbl_pol_1,
@@ -101,6 +121,9 @@ if __name__ == "__main__":
     
     # Multiplicar
     mul_window.bt_multiplicar.clicked.connect(gui_multiplicar)
+
+    # Limpiar
+    mul_window.bt_eliminar.clicked.connect(gui_eliminar)
 
     # Limpiar
     mul_window.bt_limpiar.clicked.connect(gui_limpiar)

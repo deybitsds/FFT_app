@@ -121,21 +121,21 @@ color: rgb(255, 255, 255);</string>
      <property name="geometry">
       <rect>
        <x>1</x>
-       <y>490</y>
+       <y>401</y>
        <width>960</width>
-       <height>250</height>
+       <height>200</height>
       </rect>
      </property>
      <property name="minimumSize">
       <size>
        <width>960</width>
-       <height>250</height>
+       <height>200</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>960</width>
-       <height>250</height>
+       <height>200</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -144,7 +144,8 @@ gridline-color: rgb(255, 255, 255);
 selection-color: rgb(255, 255, 255);
 selection-background-color: rgb(255, 255, 255);
 border-top-color: rgb(255, 255, 255);
-border-bottom-color: rgb(255, 255, 255);</string>
+border-bottom-color: rgb(255, 255, 255);
+background-color: rgb(129, 61, 240);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -154,13 +155,13 @@ border-bottom-color: rgb(255, 255, 255);</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_7">
       <property name="spacing">
-       <number>0</number>
+       <number>40</number>
       </property>
       <property name="leftMargin">
        <number>100</number>
       </property>
       <property name="topMargin">
-       <number>20</number>
+       <number>30</number>
       </property>
       <property name="rightMargin">
        <number>100</number>
@@ -246,22 +247,22 @@ border-radius:15px;</string>
     <widget class="QFrame" name="fr_algo">
      <property name="geometry">
       <rect>
-       <x>1</x>
+       <x>0</x>
        <y>151</y>
        <width>960</width>
-       <height>340</height>
+       <height>250</height>
       </rect>
      </property>
      <property name="minimumSize">
       <size>
        <width>960</width>
-       <height>340</height>
+       <height>250</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
        <width>960</width>
-       <height>340</height>
+       <height>250</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -270,7 +271,8 @@ gridline-color: rgb(255, 255, 255);
 selection-color: rgb(255, 255, 255);
 selection-background-color: rgb(255, 255, 255);
 border-top-color: rgb(255, 255, 255);
-border-bottom-color: rgb(255, 255, 255);</string>
+border-bottom-color: rgb(255, 255, 255);
+background-color: rgb(129, 61, 156);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -334,7 +336,8 @@ color: rgb(255, 255, 255);
         </property>
         <property name="styleSheet">
          <string notr="true">background-color: rgb(192, 191, 188);
-font: 75 32pt &quot;DejaVu Sans&quot;;</string>
+font: 75 32pt &quot;DejaVu Sans&quot;;
+background-color: rgb(255, 255, 255);</string>
         </property>
         <item>
          <property name="text">
@@ -363,16 +366,16 @@ font: 75 32pt &quot;DejaVu Sans&quot;;</string>
     <widget class="QFrame" name="fr_agre">
      <property name="geometry">
       <rect>
-       <x>1</x>
-       <y>740</y>
+       <x>0</x>
+       <y>600</y>
        <width>960</width>
-       <height>360</height>
+       <height>480</height>
       </rect>
      </property>
      <property name="minimumSize">
       <size>
        <width>960</width>
-       <height>360</height>
+       <height>480</height>
       </size>
      </property>
      <property name="maximumSize">
@@ -382,7 +385,8 @@ font: 75 32pt &quot;DejaVu Sans&quot;;</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">border:none;</string>
+      <string notr="true">border:none;
+background-color: rgb(129, 61, 156);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -400,8 +404,8 @@ font: 75 32pt &quot;DejaVu Sans&quot;;</string>
       <property name="bottomMargin">
        <number>60</number>
       </property>
-      <item row="1" column="0">
-       <widget class="QPushButton" name="bt_limpiar">
+      <item row="1" column="1">
+       <widget class="QPushButton" name="bt_estadis">
         <property name="minimumSize">
          <size>
           <width>300</width>
@@ -421,32 +425,7 @@ font: 75 25pt &quot;DejaVu Sans&quot;;
 color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
-         <string>Limpiar</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QPushButton" name="bt_multiplicar">
-        <property name="minimumSize">
-         <size>
-          <width>300</width>
-          <height>100</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>300</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">border-radius:35px;
-background-color: rgb(218, 174, 58);
-font: 75 25pt &quot;DejaVu Sans&quot;;
-color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>Multiplicar</string>
+         <string>Estadísticas</string>
         </property>
        </widget>
       </item>
@@ -475,8 +454,8 @@ color: rgb(255, 255, 255);</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="QPushButton" name="bt_estadis">
+      <item row="1" column="0">
+       <widget class="QPushButton" name="bt_eliminar">
         <property name="minimumSize">
          <size>
           <width>300</width>
@@ -496,7 +475,32 @@ font: 75 25pt &quot;DejaVu Sans&quot;;
 color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
-         <string>Estadísticas</string>
+         <string>Eliminar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="bt_multiplicar">
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius:35px;
+background-color: rgb(218, 174, 58);
+font: 75 25pt &quot;DejaVu Sans&quot;;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Multiplicar</string>
         </property>
        </widget>
       </item>
@@ -533,409 +537,435 @@ color: rgb(255, 255, 255);</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <property name="spacing">
-      <number>75</number>
+    <widget class="QFrame" name="frame_sup">
+     <property name="geometry">
+      <rect>
+       <x>76</x>
+       <y>76</y>
+       <width>810</width>
+       <height>675</height>
+      </rect>
      </property>
-     <property name="leftMargin">
-      <number>75</number>
+     <property name="minimumSize">
+      <size>
+       <width>810</width>
+       <height>675</height>
+      </size>
      </property>
-     <property name="topMargin">
-      <number>75</number>
+     <property name="maximumSize">
+      <size>
+       <width>810</width>
+       <height>730</height>
+      </size>
      </property>
-     <property name="rightMargin">
-      <number>75</number>
-     </property>
-     <property name="bottomMargin">
-      <number>75</number>
-     </property>
-     <item>
-      <widget class="QFrame" name="frame_sup">
-       <property name="minimumSize">
-        <size>
-         <width>810</width>
-         <height>675</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>810</width>
-         <height>730</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-radius:40px;
+     <property name="styleSheet">
+      <string notr="true">border-radius:40px;
 border-left-color: rgb(245, 194, 17);
 border-color: rgb(245, 194, 17);
 border-right-color: rgb(245, 194, 17);
 background-color: rgb(65, 70, 167);</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
-        <property name="spacing">
-         <number>0</number>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>60</number>
+      </property>
+      <property name="topMargin">
+       <number>30</number>
+      </property>
+      <property name="rightMargin">
+       <number>60</number>
+      </property>
+      <property name="bottomMargin">
+       <number>30</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="fr_principl">
+        <property name="minimumSize">
+         <size>
+          <width>690</width>
+          <height>615</height>
+         </size>
         </property>
-        <property name="leftMargin">
-         <number>60</number>
+        <property name="maximumSize">
+         <size>
+          <width>690</width>
+          <height>615</height>
+         </size>
         </property>
-        <property name="topMargin">
-         <number>30</number>
+        <property name="styleSheet">
+         <string notr="true">border-color: rgb(245, 194, 17);</string>
         </property>
-        <property name="rightMargin">
-         <number>60</number>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
         </property>
-        <property name="bottomMargin">
-         <number>30</number>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
         </property>
-        <item>
-         <widget class="QFrame" name="fr_principl">
-          <property name="minimumSize">
-           <size>
-            <width>690</width>
-            <height>615</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>690</width>
-            <height>615</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border-color: rgb(245, 194, 17);</string>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_2">
-           <item>
-            <widget class="QLabel" name="lbl_pol_0">
-             <property name="minimumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="lbl_pol_0">
+           <property name="minimumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
 color: rgb(255, 255, 255);
 </string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="lbl_pol_1">
-             <property name="minimumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbl_pol_1">
+           <property name="minimumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
 color: rgb(255, 255, 255);
 </string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="lbl_pol_2">
-             <property name="minimumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbl_pol_2">
+           <property name="minimumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
 color: rgb(255, 255, 255);
 </string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="lbl_pol_3">
-             <property name="minimumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbl_pol_3">
+           <property name="minimumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
 color: rgb(255, 255, 255);
 </string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="lbl_pol_4">
-             <property name="minimumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbl_pol_4">
+           <property name="minimumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
 color: rgb(255, 255, 255);
 </string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="lbl_pol_5">
-             <property name="minimumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbl_pol_5">
+           <property name="minimumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
 color: rgb(255, 255, 255);
 </string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="lbl_pol_6">
-             <property name="minimumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbl_pol_6">
+           <property name="minimumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
 color: rgb(255, 255, 255);
 </string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="lbl_pol_7">
-             <property name="minimumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>670</width>
-               <height>76</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbl_pol_7">
+           <property name="minimumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>670</width>
+             <height>76</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
 color: rgb(255, 255, 255);
 </string>
-             </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item>
-      <widget class="QFrame" name="frame_inf">
-       <property name="minimumSize">
-        <size>
-         <width>810</width>
-         <height>200</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>810</width>
-         <height>200</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-radius:40px;
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QFrame" name="frame_inf">
+     <property name="geometry">
+      <rect>
+       <x>76</x>
+       <y>804</y>
+       <width>810</width>
+       <height>200</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>810</width>
+       <height>200</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>810</width>
+       <height>200</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:40px;
 background-color: rgb(65, 70, 167);</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_8">
-        <property name="spacing">
-         <number>0</number>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_8">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>30</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>30</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="show_resul">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
         </property>
-        <property name="leftMargin">
-         <number>30</number>
+        <property name="maximumSize">
+         <size>
+          <width>400</width>
+          <height>40</height>
+         </size>
         </property>
-        <property name="topMargin">
-         <number>10</number>
-        </property>
-        <property name="rightMargin">
-         <number>30</number>
-        </property>
-        <property name="bottomMargin">
-         <number>10</number>
-        </property>
-        <item>
-         <widget class="QLabel" name="show_resul">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>400</width>
-            <height>40</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
+        <property name="styleSheet">
+         <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;
 color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;RESULTADO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="msj_resul">
-          <property name="minimumSize">
-           <size>
-            <width>760</width>
-            <height>70</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>760</width>
-            <height>70</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>DejaVu Sans</family>
-            <pointsize>30</pointsize>
-            <weight>9</weight>
-            <italic>false</italic>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;RESULTADO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="msj_resul">
+        <property name="minimumSize">
+         <size>
+          <width>760</width>
+          <height>70</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>760</width>
+          <height>70</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans</family>
+          <pointsize>30</pointsize>
+          <weight>9</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
 font: 75 30pt &quot;DejaVu Sans&quot;;
 border-radius:20px;</string>
-          </property>
-          <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="msj_tiempo">
-          <property name="minimumSize">
-           <size>
-            <width>760</width>
-            <height>40</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>760</width>
-            <height>40</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;</string>
-          </property>
-          <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-    </layout>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="msj_tiempo">
+        <property name="minimumSize">
+         <size>
+          <width>760</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>760</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 25pt &quot;DejaVu Sans&quot;;</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="bt_limpiar">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>10</y>
+       <width>200</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:35px;
+background-color: rgb(218, 174, 58);
+font: 75 25pt &quot;DejaVu Sans&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Limpiar</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
