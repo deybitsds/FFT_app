@@ -72,7 +72,7 @@ def gui_multiplicar():
 
     establecer_tiempos(opcion_actual, pila_coeficientes)
 
-    salida_tiempo = f"Tiempo de ejecución: {tiempo_transcurrido * 1e+6:.5f} µs"
+    salida_tiempo = f"Tiempo de ejecución: {tiempo_transcurrido:.5f} µs"
     mul_window.msj_tiempo.setText(salida_tiempo)
 
  # ---------- Limpiar
@@ -143,8 +143,7 @@ def limpiar_grafico(layout):
 def recuperar_tiempos():
     return [valor for valor in diccionario_tiempos.values()]
 
-
-
+# ---------- Operar
 def operar(opcion_actual, lista_coeficientes):
     global diccionario_tiempos, diccionario_funciones
 
@@ -164,18 +163,16 @@ def operar(opcion_actual, lista_coeficientes):
     tiempo_transcurrido = fin - inicio
 
     # establecer todos los valores del diccionario con el tiempo transcurrido del algoritmo actual
-    diccionario_tiempos[opcion_actual] = tiempo_transcurrido
+    diccionario_tiempos[opcion_actual] = tiempo_transcurrido * 1e6
 
     return resultado
+
 def establecer_tiempos(opcion_actual, lista_coeficientes):
     global diccionario_tiempos
 
     for clave in diccionario_tiempos:
         if clave != opcion_actual:
             operar(opcion_actual = clave, lista_coeficientes = lista_coeficientes)
-
-
-
 
 # -- 
 ## PROGRAMA PRINCIPAL

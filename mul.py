@@ -2,7 +2,6 @@ import time
 import numpy as np
 
 # ---------- Operar
-
 def operar_dos_en_dos(funcion, lista_coef_1, lista_coef_2):
     return funcion(lista_coef_1, lista_coef_2)
 

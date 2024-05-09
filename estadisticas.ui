@@ -27,7 +27,8 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget#centralwidget{
-background-color: rgb(65, 70, 167);}</string>
+background-color: rgb(102, 111, 152);
+background-color: rgb(45, 50, 80);}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="bt_volver">
@@ -53,9 +54,9 @@ background-color: rgb(65, 70, 167);}</string>
     </property>
     <property name="styleSheet">
      <string notr="true">border-radius:35px;
-background-color: rgb(218, 174, 58);
-font: 75 25pt &quot;DejaVu Sans&quot;;
-color: rgb(255, 255, 255);</string>
+font: 75 Bold 20pt &quot;Montserrat&quot;;
+background-color: rgb(255, 177, 122);
+color: rgb(45, 50, 80);</string>
     </property>
     <property name="text">
      <string>Regresar</string>
@@ -83,7 +84,9 @@ color: rgb(255, 255, 255);</string>
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true">border:none;
+font: 75 Bold 35pt &quot;Montserrat&quot;;
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:600;&quot;&gt;Comparación de tiempos de ejecución&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -99,7 +102,8 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
+     <string notr="true">background-color: rgb(45, 50, 80);
+background-color: rgb(102, 111, 152);
 border-radius:20px;</string>
     </property>
     <property name="frameShape">
