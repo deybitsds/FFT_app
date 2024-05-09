@@ -1,9 +1,18 @@
-# Librerias
+## LIBRERIAS
+
+# -- Librerias para el grafico
+import matplotlib
+matplotlib.use('Qt5Agg')  # Especificar el backend Qt5Agg
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+
+# -- Librerias para el manejo de la UI
 from PyQt5 import QtWidgets, uic
+
+# -- Llamada a modulos de polinomios
 from polinomios import *
 from mul import *
 from est import *
-
 
 ## FUNCIONES
 
@@ -79,14 +88,60 @@ def gui_limpiar():
 
 # ---------- Estadisticas
 def gui_estadisticas():
-    # mostrar_grafico()
-    # ventana.show()
+    
+    layout = est_window.findChild(QtWidgets.QVBoxLayout, 'qv_imagen')
+
+    limpiar_grafico(layout)
+    actualizar_grafico(layout)
+
     est_window.show()
+    mul_window.hide()
     est_window.bt_volver.clicked.connect(gui_volver)
     
 def gui_volver():
+    mul_window.show()
     est_window.hide()
 
+def actualizar_grafico(layout):
+    
+    # Datos para la gráfica
+    nombres = ['Lagrange', 'Vandermonde \nen R', 'Vandermonde \nen I', 'Bit Reverso']
+    tiempos = recuperar_tiempos()
+
+    # Definir una paleta de colores
+    colores = ['red', 'green', 'blue', 'purple']
+
+    # Crear la figura y el lienzo de Matplotlib
+    fig, ax = plt.subplots()
+    ax.bar(nombres, tiempos, color=colores)
+
+    # ax.plot(nombres, tiempos)
+    ax.set_xlabel('Método')
+    ax.set_ylabel('Tiempo de ejecución (µ segundos)')
+    ax.set_title('Comparación de Tiempos de Ejecución')
+    ax.grid(True)
+
+
+    # Crear el lienzo de la gráfica de Matplotlib como un widget de PyQt5
+    canvas = FigureCanvas(fig)
+    
+    # Obtener el QVBoxLayout de la ventana principal
+    # layout = est_window.findChild(QtWidgets.QVBoxLayout, 'qv_imagen')
+    
+    # Agregar el widget de la gráfica al QVBoxLayout
+    layout.addWidget(canvas)
+
+def limpiar_grafico(layout):
+    while layout.count():
+        child = layout.takeAt(0)
+        if child.widget():
+            child.widget().deleteLater()
+
+def recuperar_tiempos():
+    return [valor for valor in diccionario_tiempos.values()]
+
+# -- 
+## PROGRAMA PRINCIPAL
 pila_polinomios = []
 
 pila_coeficientes = []
@@ -96,7 +151,11 @@ diccionario_funciones = {"Lagrange": mul_con_lagrange,
                         "Vandermonde en I":mul_con_vandermonde_i,
                         "Bit reverso": mul_con_bit_reverso}
 
-## PROGRAMA PRINCIPAL
+diccionario_tiempos = {"Lagrange": 0.0,
+                        "Vandermonde en R": 0.0,
+                        "Vandermonde en I": 0.0,
+                        "Bit reverso": 0.0}
+
 if __name__ == "__main__":
 
     app = QtWidgets.QApplication([])

@@ -125,7 +125,7 @@ border-radius:20px;</string>
       <number>20</number>
      </property>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout"/>
+      <layout class="QVBoxLayout" name="qv_imagen"/>
      </item>
     </layout>
    </widget>

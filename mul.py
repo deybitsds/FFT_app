@@ -102,10 +102,8 @@ def evaluacion_horner(A):
             resultado[k] = x[k] * resultado[k] + A[i-1]  # Aplicación del método de Horner
     # Retornar resultado
     return resultado
-
 def operar_lagrange(A, B):
     return mul_con_vandermonde_i(A,B)
-
 # Módulo Convolución
 def convolucion(A, B):
     # Inicializar una lista para almacenar los coeficientes del resultado de la convolución
