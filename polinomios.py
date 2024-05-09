@@ -61,3 +61,4 @@ def polinomio_es_valido(string):
 
 if __name__ == "__main__":
     print(recuperar_coeficientes_polinomio_mal_escrito("1 + 2x"))
+

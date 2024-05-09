@@ -12,7 +12,6 @@ from PyQt5 import QtWidgets, uic
 # -- Llamada a modulos de polinomios
 from polinomios import *
 from mul import *
-from est import *
 
 ## FUNCIONES
 
@@ -64,10 +63,14 @@ def gui_multiplicar():
         return 
 
     opcion_actual = mul_window.comboBox.currentText()
-    resultado, tiempo_transcurrido = operar(funcion = diccionario_funciones[opcion_actual], lista_coeficientes = pila_coeficientes)
+    resultado = operar(opcion_actual = opcion_actual, lista_coeficientes = pila_coeficientes)
     
     salida_resultado = imprimir_polinomio_bien_escrito(resultado)
     mul_window.msj_resul.setText(salida_resultado)
+     
+    tiempo_transcurrido = diccionario_tiempos[opcion_actual]
+
+    establecer_tiempos(opcion_actual, pila_coeficientes)
 
     salida_tiempo = f"Tiempo de ejecución: {tiempo_transcurrido * 1e+6:.5f} µs"
     mul_window.msj_tiempo.setText(salida_tiempo)
@@ -139,6 +142,40 @@ def limpiar_grafico(layout):
 
 def recuperar_tiempos():
     return [valor for valor in diccionario_tiempos.values()]
+
+
+
+def operar(opcion_actual, lista_coeficientes):
+    global diccionario_tiempos, diccionario_funciones
+
+    funcion = diccionario_funciones[opcion_actual]
+
+    resultado = lista_coeficientes[0]
+
+    # MEDIR TIEMPO
+    inicio = time.time()
+
+    for k in range(1,len(lista_coeficientes)):
+        resultado = operar_dos_en_dos(funcion, resultado, lista_coeficientes[k])
+    
+    # MEDIR TIEMPO
+    fin = time.time()
+
+    tiempo_transcurrido = fin - inicio
+
+    # establecer todos los valores del diccionario con el tiempo transcurrido del algoritmo actual
+    diccionario_tiempos[opcion_actual] = tiempo_transcurrido
+
+    return resultado
+def establecer_tiempos(opcion_actual, lista_coeficientes):
+    global diccionario_tiempos
+
+    for clave in diccionario_tiempos:
+        if clave != opcion_actual:
+            operar(opcion_actual = clave, lista_coeficientes = lista_coeficientes)
+
+
+
 
 # -- 
 ## PROGRAMA PRINCIPAL

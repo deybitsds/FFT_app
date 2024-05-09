@@ -2,22 +2,6 @@ import time
 import numpy as np
 
 # ---------- Operar
-def operar(funcion, lista_coeficientes):
-
-    resultado = lista_coeficientes[0]
-
-    # MEDIR TIEMPO
-    inicio = time.time()
-
-    for k in range(1,len(lista_coeficientes)):
-        resultado = operar_dos_en_dos(funcion, resultado, lista_coeficientes[k])
-    
-    # MEDIR TIEMPO
-    fin = time.time()
-
-    tiempo_trancurrido = fin - inicio
-
-    return resultado, tiempo_trancurrido
 
 def operar_dos_en_dos(funcion, lista_coef_1, lista_coef_2):
     return funcion(lista_coef_1, lista_coef_2)
