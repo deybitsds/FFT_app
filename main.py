@@ -8,6 +8,8 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
 # -- Librerias para el manejo de la UI
 from PyQt5 import QtWidgets, uic
+
+# -- importar loas guis
 import main2_ui
 import estadisticas_ui
 
